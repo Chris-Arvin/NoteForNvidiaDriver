@@ -22,3 +22,10 @@
 2. sudo systemctl set-default graphical.target
 
 ref: https://blog.csdn.net/qq_38853759/article/details/132522471
+
+##### 3. ==An alternative way to force Gazebo to use Nvidia Graphic Card [It works when nvidia-smi works well but OpenGL is not Nvidia card!!]==:
+```bash
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+exec gazebo
+```
